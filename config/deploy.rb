@@ -20,7 +20,7 @@ set :deploy_to, '/home/deploy/ssardesai'
 # set :log_level, :debug
 
 # Default value for :pty is false
-set :pty, true
+#set :pty, true
 
 # Default value for :linked_files is []
 # set :linked_files, fetch(:linked_files, []).push('config/database.yml', 'config/secrets.yml')
@@ -35,7 +35,12 @@ set :pty, true
 set :keep_releases, 5
 
 namespace :deploy do
-
+  desc "App restart"
+  task :restart do
+    on roles(:app), in: :sequence, wait: 5 do
+      execute :touch, release_path.join('tmp/restart.txt')
+    end
+  end
   after :restart, :clear_cache do
     on roles(:web), in: :groups, limit: 3, wait: 10 do
       # Here we can do anything such as:
@@ -44,5 +49,5 @@ namespace :deploy do
       # end
     end
   end
-
+  after :finishing, 'deploy:cleanup'
 end
