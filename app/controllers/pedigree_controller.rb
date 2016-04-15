@@ -1,0 +1,2 @@
+class PedigreeController < ApplicationController
+end
