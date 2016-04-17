@@ -10,6 +10,11 @@
  * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
  * file per style scope.
  *
- *= require_tree .
- *= require_self
+ *= require contact
+ *= require blog
+ *= require projects
+ *= require pedigree
  */
+
+@import "bootstrap";
+@import "//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css"

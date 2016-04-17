@@ -1,0 +1,40 @@
+<%= stylesheet_link_tag 'profiles' %>
+<div class="container">
+	<div class="row text-center">
+		<div class="col-lg-12 col-sm-12 col-xs-12 text-center">
+
+            <div class="card hovercard">
+                <div class="cardheader" style="background: url(<%=@profile['coverpic']%>) ">
+
+                </div>
+                <div class="avatar">
+                    <%= image_tag src=@profile["profilepic"] %>
+                </div>
+                <div class="info">
+                    <div class="title">
+                        <a target="_blank" href="http://scripteden.com/"><%= @profile["name"] %></a>
+                    </div>
+                    <div class="desc">Passionate designer</div>
+                    <div class="desc">Curious developer</div>
+                    <div class="desc">Tech geek</div>
+                </div>
+                <div class="bottom">
+                    <%= link_to("#{@profile['links']['twitter']}", html_options = {class: 'btn btn-primary btn-sm', rel: "publisher"}) do %>
+                      <i class="fa fa-twitter"></i>
+                    <% end %>
+                    <%= link_to("#{@profile['links']['googleplus']}", html_options = {class: 'btn btn-danger btn-sm', rel: "publisher"}) do %>
+                      <i class="fa fa-google-plus"></i>
+                    <% end %>
+                    <%= link_to("#{@profile['links']['facebook']}", html_options = {class: 'btn btn-primary btn-sm', rel: "publisher"}) do %>
+                      <i class="fa fa-facebook"></i>
+                    <% end %>
+                    <%= link_to("#{@profile['links']['linkedin']}", html_options = {class: 'btn btn-danger btn-sm', rel: "publisher"}) do %>
+                      <i class="fa fa-linkedin"></i>
+                    <% end %>
+                </div>
+            </div>
+
+        </div>
+
+	</div>
+</div>
