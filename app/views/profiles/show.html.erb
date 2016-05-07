@@ -14,27 +14,33 @@
                     <div class="title">
                         <a target="_blank" href="http://scripteden.com/"><%= @profile["name"] %></a>
                     </div>
-                    <div class="desc">Passionate designer</div>
-                    <div class="desc">Curious developer</div>
-                    <div class="desc">Tech geek</div>
+                    <% @profile['bragwords'].split(",").each do |brag| %>
+                      <div class="desc"><%=brag%></div>
+                    <%end%>
                 </div>
                 <div class="bottom">
-                    <%= link_to("#{@profile['links']['twitter']}", html_options = {class: 'btn btn-primary btn-sm', rel: "publisher"}) do %>
-                      <i class="fa fa-twitter"></i>
+                    <% if !@profile['links']['twitter'].blank? %>
+                      <%= link_to("#{@profile['links']['twitter']}", html_options = {class: 'btn btn-primary btn-sm', rel: "publisher"}) do %>
+                        <i class="fa fa-twitter"></i>
+                      <% end %>
+                    <%end%>
+                    <% if !@profile['links']['googleplus'].blank? %>
+                      <%= link_to("#{@profile['links']['googleplus']}", html_options = {class: 'btn btn-danger btn-sm', rel: "publisher"}) do %>
+                        <i class="fa fa-google-plus"></i>
+                      <% end %>
                     <% end %>
-                    <%= link_to("#{@profile['links']['googleplus']}", html_options = {class: 'btn btn-danger btn-sm', rel: "publisher"}) do %>
-                      <i class="fa fa-google-plus"></i>
+                    <% if !@profile['links']['facebook'].blank? %>
+                      <%= link_to("#{@profile['links']['facebook']}", html_options = {class: 'btn btn-primary btn-sm', rel: "publisher"}) do %>
+                        <i class="fa fa-facebook"></i>
+                      <% end %>
                     <% end %>
-                    <%= link_to("#{@profile['links']['facebook']}", html_options = {class: 'btn btn-primary btn-sm', rel: "publisher"}) do %>
-                      <i class="fa fa-facebook"></i>
-                    <% end %>
-                    <%= link_to("#{@profile['links']['linkedin']}", html_options = {class: 'btn btn-danger btn-sm', rel: "publisher"}) do %>
-                      <i class="fa fa-linkedin"></i>
+                    <% if !@profile['links']['linkedin'].blank? %>
+                      <%= link_to("#{@profile['links']['linkedin']}", html_options = {class: 'btn btn-danger btn-sm', rel: "publisher"}) do %>
+                        <i class="fa fa-linkedin"></i>
+                      <% end %>
                     <% end %>
                 </div>
             </div>
-
         </div>
-
 	</div>
 </div>
