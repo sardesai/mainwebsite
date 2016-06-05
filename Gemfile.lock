@@ -1,5 +1,6 @@
-PATH
-  remote: ../yaml_record
+GIT
+  remote: git@github.com:sardesai/yaml_record.git
+  revision: 9b9426f11ed58a205fc3c782a1bbcb7d912c54de
   specs:
     yaml_record (0.0.6)
       activesupport (~> 4.2.5.1)
