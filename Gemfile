@@ -25,6 +25,7 @@ gem 'bourbon'
 gem 'neat'
 gem 'react-rails'
 gem 'bootstrap'
+gem 'yaml_record', :path => "../yaml_record"#:git => 'git@github.com:sardesai/yaml_record.git'
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
@@ -44,6 +45,8 @@ group :development do
   # Access an IRB console on exception pages or by using <%= console %> in views
   gem 'web-console', '~> 2.0'
   gem 'capistrano'
+  gem 'capistrano-bundler'
+  gem 'capistrano-rails'
 
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'spring'

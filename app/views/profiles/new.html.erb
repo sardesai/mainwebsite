@@ -1,0 +1,15 @@
+<%= form_for :profile, url: profiles_path do |f| %>
+  <p>
+    <%= f.label :name %><br>
+    <%= f.text_field :name %>
+  </p>
+
+  <p>
+    <%= f.label :bragwords %><br>
+    <%= f.text_area :bragwords %>
+  </p>
+
+  <p>
+    <%= f.submit %>
+  </p>
+<% end %>
