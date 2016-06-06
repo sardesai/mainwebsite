@@ -26,6 +26,7 @@ gem 'neat'
 gem 'react-rails'
 gem 'bootstrap'
 gem 'yaml_record', :git => 'git@github.com:sardesai/yaml_record.git'
+gem 'redcarpet'
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
