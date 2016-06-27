@@ -12,7 +12,11 @@
 
   <% @profiles.each do |article| %>
     <tr>
-      <td><%= article.name %></td>
+      <td>
+        <%= link_to('profiles/'+article.id) do %>
+          <%= article.name %>
+        <% end %>
+      </td>
       <td><%= article.bragwords %></td>
     </tr>
   <% end %>

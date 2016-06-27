@@ -1,0 +1,27 @@
+<h1>Listing Blogs</h1>
+
+<table style="    width: 97%;
+    padding: 2em;
+    margin: 1em;
+    border-top: 1px dotted;
+    border-bottom: 1px dotted;">
+  <tr>
+    <th>Title</th>
+    <th>Author</th>
+    <th>Month</th>
+    <th>Year</th>
+  </tr>
+
+  <% @blogs.each do |article| %>
+    <tr>
+      <td>
+        <%= link_to('blog/'+article.id.to_s) do %>
+          <%= article.title %>
+        <% end %>
+      </td>
+      <td><%= article.author %></td>
+      <td><%= article.month %></td>
+      <td><%= article.year %></td>
+    </tr>
+  <% end %>
+</table>

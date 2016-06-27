@@ -5,6 +5,14 @@ class BlogController < ApplicationController
     ## actual rendering part here
     renderer = Redcarpet::Render::HTML.new(prettify: true)
     markdown = Redcarpet::Markdown.new(renderer, autolink: true, tables: true, fenced_code_blocks: true)
-    @returnobj = markdown.render(File.read("#{Rails.root}/filestore/blogs/testentry.md")).html_safe
+    ##FIXME id become an integer if its parsable :/ will need to remove the to_i in the future if i change to string
+    blogpost = Blog.find(params[:id].to_i)
+    @returnobj = markdown.render(File.read("#{Rails.root}/filestore/blogs/#{blogpost.filename}")).html_safe
   end
+
+  def index
+    @blogs = Blog.all
+    p @blogs
+  end
+
 end

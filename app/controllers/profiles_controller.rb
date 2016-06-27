@@ -19,24 +19,11 @@ class ProfilesController < ApplicationController
     p parsed_prof
     @profile = Profile.new(parsed_prof)
     @profile.save
-=begin
-    if (prof.save)
-      p "saved successfully"
-      redirect_to prof
-    else
-      p "error saving"
-    end
-=end
   end
 
   def index
     @profiles = Profile.all
     p @profiles
-
-    #proftosave = Profile.create(@profiles)
-    #p proftosave
-    #proftosave.save
-
   end
 
   def new
