@@ -1,6 +1,6 @@
 <h1>Listing Blogs</h1>
 
-<table style="    width: 97%;
+<table id="blogslist" style="    width: 97%;
     padding: 2em;
     margin: 1em;
     border-top: 1px dotted;
@@ -8,20 +8,31 @@
   <tr>
     <th>Title</th>
     <th>Author</th>
-    <th>Month</th>
-    <th>Year</th>
   </tr>
 
   <% @blogs.each do |article| %>
-    <tr>
+    <tr data-tt-id="#{article.year}">
+      <td>
+        <%= article.year %>
+      </td>
+      <td />
+    </tr>
+    <tr data-tt-id="#{article.month}" data-tt-parent-id="#{article.year}">
+      <td>
+        <%= article.month %>
+      </td>
+      <td />
+    </tr>
+    <tr data-tt-id="#{article.date}" data-tt-parent-id="#{article.month}">
       <td>
         <%= link_to('blog/'+article.id.to_s) do %>
           <%= article.title %>
         <% end %>
       </td>
       <td><%= article.author %></td>
-      <td><%= article.month %></td>
-      <td><%= article.year %></td>
     </tr>
   <% end %>
 </table>
+<script>
+  $("#blogslist").treetable({expandable: true});
+</script>
