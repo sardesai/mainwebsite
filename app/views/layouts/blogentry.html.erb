@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html class="cufon-active cufon-ready">
+<head>
+  <title>Storyteller</title>
+  <%= stylesheet_link_tag    'application', media: 'all'%>
+  <%= javascript_include_tag 'application' %>
+  <script type="text/javascript" src="http://static.tumblr.com/gpln05e/EeSldaeda/cufon-yui.js"></script>
+	<script type="text/javascript" src="http://static.tumblr.com/gpln05e/5Jfli50cx/hitchcock-550.font.js"></script>
+	<%= csrf_meta_tags %>
+  <script type="text/javascript">
+	// <![CDATA[
+
+		var obj = null;
+		function fadeObject() {
+			if (obj) obj.find(".data").fadeOut("slow");
+		}
+		$(function() {
+
+			Cufon.set("fontFamily", "Hitchcock").replace("h1", { fontSize: "36px", lineHeight: "1.5" });
+			Cufon.set("fontFamily", "Hitchcock").replace("h2.title", { fontSize: "24px", lineHeight: "1.5" });
+
+			$(".meta").hover(function() {
+				if (obj) {
+					obj.find(".data").fadeOut("slow");
+					obj = null;
+				}
+				$(this).find(".data").fadeIn("fast");
+			}, function() {
+				obj = $(this);
+				setTimeout("fadeObject()",1000);
+			});
+			$(".video").hover(function() {
+				$(this).find(".projector").removeClass("hidden");
+			}, function() {
+				$(this).find(".projector").addClass("hidden");
+			});
+			$(".video #notes").appendTo(".video")
+				.css("background-color","#000")
+				.find(".notes").css({"margin-left": "200px", "margin-top": "0"});
+			$(".audio").hover(function() {
+				$(this).find(".cassette").removeClass("hidden");
+			}, function() {
+				$(this).find(".cassette").addClass("hidden");
+			});
+			$("#footer .search").click(function(event) {
+				event.preventDefault();
+				$("#search").slideToggle();
+				if ($("#search-query").val() == "") {
+					$("#search-query").val("Search");
+					$("#search-query").focus(function() {
+						if ($("#search-query").val() == "Search") {
+							$("#search-query").val("");
+						}
+					});
+					$("#search-query").blur(function() {
+						if ($("#search-query").val() == "") {
+							$("#search-query").val("Search");
+						}
+					});
+				}
+			});
+			$("#following li").each(function() {
+				var num = Math.ceil(Math.random()*4);
+				$(this).addClass("alt"+num);
+			});
+			$("p,div.content,blockquote").each(function() {
+				var para = $(this).html();
+				para = para.replace(/:[-]?[\)D]/g, "<img src='http://static.tumblr.com/gpln05e/nEO9jBxSQ/smiley.png' />");
+				$(this).html(para);
+			});
+		});
+	// ]]>
+	</script>
+
+</head>
+<body>
+<h1><cufon class="cufon cufon-canvas" alt="Storyteller" style="width: 364px; height: 36px;"><canvas width="409" height="37" style="width: 409px; height: 37px; top: 0px; left: 0px;"></canvas><cufontext>Storyteller</cufontext></cufon></h1>
+  <h3>I had a dream, It was a story</h3>
+<br/> <br />
+<%= yield %>
+<script type="text/javascript">
+	// <![CDATA[
+		Cufon.now();
+	// ]]>
+	</script>
+
+</body>
+</html>
+
