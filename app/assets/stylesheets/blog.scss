@@ -1,3 +1,51 @@
 // Place all the styles related to the Blog controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+#blog-container{
+  p, pre, ol, ul, h1, h2 {
+    max-width : 600px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: justify;
+    font-size: 130%;
+  }
+  table {
+    font-size: 130%;
+  }
+  th {
+    text-align:left;
+  }
+  h1 {
+    max-width: 700px;
+    font-size: 250%; text-align: center; text-transform: uppercase;
+    color: #ee3322;
+  }
+  h2 {
+    font-size: 175%;
+    //padding-right: 5em;
+  }
+  h3 {
+    font-size: 130%;
+    text-align: center;
+    padding-left: 15em;
+  }
+  cufon{text-indent:0!important;}
+  @media screen,projection{
+    cufon{
+      display:inline!important;display:inline-block!important;position:relative!important;vertical-align:middle!important;font-size:1px!important;line-height:1px!important;
+    }
+    cufon cufontext{
+      display:-moz-inline-box!important;display:inline-block!important;width:0!important;height:0!important;overflow:hidden!important;text-indent:-10000in!important;
+    }
+    cufon canvas{
+      position:relative!important;
+    }
+  }
+  @media print{
+    cufon{padding:0!important;}cufon canvas{display:none!important;}
+  }
+  a, a:hover, a:active, a:visited {
+    text-decoration: none;
+    color: red;
+  }
+}

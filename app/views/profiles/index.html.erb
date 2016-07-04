@@ -1,13 +1,71 @@
-<h1>Listing articles</h1>
+<style>
+  body {
+    font-size: 62.5%;
+    padding:1em;
+    //background-color: #4a525a;
+    background-color: #000;
+    min-width: 760px;
+    //color:white;
+    color: #ddd;
+    font-family: 'Open Sans'
+  }
+  th {
+    text-align:left;
+  }
+  p, pre, ol, ul, h1, h2 {
+    max-width : 600px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: justify;
+    font-size: 130%;
+  }
+  table {
+    font-size: 130%;
+  }
+  h1 {
+    max-width: 700px;
+    font-size: 250%; text-align: center; text-transform: uppercase;
+    color: #ee3322;
+  }
+  h2 {
+    font-size: 175%;
+    //padding-right: 5em;
+  }
+  h3 {
+    font-size: 130%;
+    text-align: center;
+    padding-left: 15em;
+  }
+  cufon{text-indent:0!important;}
+  @media screen,projection{
+    cufon{
+      display:inline!important;display:inline-block!important;position:relative!important;vertical-align:middle!important;font-size:1px!important;line-height:1px!important;
+    }
+    cufon cufontext{
+      display:-moz-inline-box!important;display:inline-block!important;width:0!important;height:0!important;overflow:hidden!important;text-indent:-10000in!important;
+    }
+    cufon canvas{
+      position:relative!important;
+    }
+  }
+  @media print{
+    cufon{padding:0!important;}cufon canvas{display:none!important;}
+  }
+  a, a:hover, a:active, a:visited {
+    text-decoration: none;
+    color: red;
+  }
+</style>
+<h1>Profiles</h1>
 
 <table style="    width: 97%;
     padding: 2em;
     margin: 1em;
-    border-top: 1px dotted;
-    border-bottom: 1px dotted;">
+    border-top: 1px dashed;
+    border-bottom: 1px dashed;">
   <tr>
-    <th>Title</th>
-    <th>Text</th>
+    <th>Profile</th>
+    <th>Brags about</th>
   </tr>
 
   <% @profiles.each do |article| %>

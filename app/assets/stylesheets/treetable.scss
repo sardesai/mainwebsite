@@ -28,10 +28,10 @@ table.treetable span.indenter a {
 }
 
 table.treetable {
-  border: 1px solid #888;
+  //border: 1px solid #888;
   border-collapse: collapse;
-  font-size: .8em;
-  line-height: 1;
+  //font-size: .8em;
+  //line-height: 1;
   margin: .6em 0 1.8em 0;
   width: 100%;
 }
@@ -82,7 +82,7 @@ table.treetable tr.expanded span.indenter a {
 }
 
 table.treetable tr.branch {
-  background-color: #f9f9f9;
+  //background-color: #f9f9f9;
 }
 
 table.treetable tr.selected {

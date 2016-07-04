@@ -1,5 +1,5 @@
 class BlogController < ApplicationController
-  layout "blogentry"
+  layout "blogentry"#, except: [:index]
   def show
     ## use YAML store to maintain blog list. get blog's corresponding markup file from the store then render it
     ##TODO code to get markup file from YAML store here

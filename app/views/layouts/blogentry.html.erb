@@ -7,6 +7,18 @@
   <script type="text/javascript" src="http://static.tumblr.com/gpln05e/EeSldaeda/cufon-yui.js"></script>
 	<script type="text/javascript" src="http://static.tumblr.com/gpln05e/5Jfli50cx/hitchcock-550.font.js"></script>
 	<%= csrf_meta_tags %>
+  <style>
+    body {
+      font-size: 62.5%;
+      padding:1em;
+      //background-color: #4a525a;
+      background-color: #000;
+      min-width: 760px;
+      //color:white;
+      color: #ddd;
+      font-family: 'Open Sans'
+    }
+  </style>
   <script type="text/javascript">
 	// <![CDATA[
 
@@ -74,10 +86,7 @@
 
 </head>
 <body>
-<h1><cufon class="cufon cufon-canvas" alt="Storyteller" style="width: 364px; height: 36px;"><canvas width="409" height="37" style="width: 409px; height: 37px; top: 0px; left: 0px;"></canvas><cufontext>Storyteller</cufontext></cufon></h1>
-  <h3>I had a dream, It was a story</h3>
-<br/> <br />
-<%= yield %>
+  <div id="blog-container"><%= yield %></div>
 <script type="text/javascript">
 	// <![CDATA[
 		Cufon.now();
