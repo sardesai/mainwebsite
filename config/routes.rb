@@ -34,6 +34,7 @@ Rails.application.routes.draw do
   #   end
   resources :profiles
   resources :blog
+  get 'pedigree' => 'pedigree#index'
   # Example resource route with more complex sub-resources:
   #   resources :products do
   #     resources :comments

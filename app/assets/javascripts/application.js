@@ -15,4 +15,8 @@
 //= require react
 //= require react_ujs
 //= require components
-//= require_tree .
+//= require blog
+//= require contact
+//= require jquery.treetable
+//= require profiles
+//= require projects
