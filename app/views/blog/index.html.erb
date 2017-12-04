@@ -13,19 +13,19 @@
   </tr>
 
   <% @blogs.each do |article| %>
-    <tr data-tt-id="#{article.year}">
+    <tr data-tt-id="<%=article.year%>">
       <td>
         <%= article.year %>
       </td>
       <td />
     </tr>
-    <tr data-tt-id="#{article.month}" data-tt-parent-id="#{article.year}">
+    <tr data-tt-id="<%=article.month%>" data-tt-parent-id="<%=article.year%>">
       <td>
         <%= article.month %>
       </td>
       <td />
     </tr>
-    <tr data-tt-id="#{article.date}" data-tt-parent-id="#{article.month}">
+    <tr data-tt-id="<%=article.date%>" data-tt-parent-id="<%=article.month%>">
       <td>
         <%= link_to('blog/'+article.id.to_s) do %>
           <%= article.title %>
@@ -36,5 +36,5 @@
   <% end %>
 </table>
 <script>
-  $("#blogslist").treetable({expandable: true});
+  $("#blogslist").treetable({expandable: true%>);
 </script>
