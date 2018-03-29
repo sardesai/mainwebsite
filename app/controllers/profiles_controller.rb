@@ -11,14 +11,16 @@ class ProfilesController < ApplicationController
     #respond_to html
 =end
     @profile = Profile.find(params[:id])
-    p @profile
   end
 
   def create
     parsed_prof = params[:profile].symbolize_keys
-    p parsed_prof
     @profile = Profile.new(parsed_prof)
-    @profile.save
+    if @profile.save
+      redirect_to post_path(@profile)
+    else
+      render "new"
+    end
   end
 
   def index

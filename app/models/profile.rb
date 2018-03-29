@@ -1,6 +1,6 @@
 class Profile  < YamlRecord::Base
   # Declare your properties
-  properties :name, :bragwords, :coverpic, :profilepic, :twitter, :linkedin, :facebook, :googleplus, :email, :id
+  properties :persisted, :name, :bragwords, :coverpic, :profilepic, :twitter, :linkedin, :facebook, :googleplus, :email, :id
 
   # Declare your adapter (local by default)
   adapter :local # or :redis

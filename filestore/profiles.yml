@@ -1,20 +1,34 @@
+---
 shardul:
-  name: Shardul Sardesai
-  bragwords: Curious developer, Foodie, Adventurer
-  twitter: tmp
-  linkedin: https://linkd.in/lionsardesai
-  facebook: https://www.facebook.com/lionsardesai
-  googleplus: https://plus.google.com/lionsardesai
-  email: shardul@ssardesai.com
-  coverpic: https://scontent-sjc2-1.xx.fbcdn.net/hphotos-xaf1/v/t1.0-9/562218_10151289772402130_951810956_n.jpg?oh=d29f7a5ab5641d8882e5c308ba89e1e5&oe=57AC5CB8
-  profilepic: https://scontent-sjc2-1.xx.fbcdn.net/hphotos-xtp1/v/t1.0-9/10898165_10152472452997130_7446908659714484990_n.jpg?oh=29073b9a85ff4d917c3977436f8d3c55&oe=577F4118
+  :name: Shardul Sardesai
+  :bragwords: Curious developer, Foodie, Adventurer
+  :coverpic: 
+  :profilepic: 
+  :twitter: tmp
+  :linkedin: https://linkd.in/lionsardesai
+  :facebook: https://www.facebook.com/lionsardesai
+  :googleplus: https://plus.google.com/lionsardesai
+  :email: shardul@ssardesai.com
+  :id: shardul
 sushrut:
-  name: Sushrut Sardesai
-  bragwords: Wanderer, Photographer
-  twitter:
-  linkedin:
-  facebook: https://www.facebook.com/sardesai.sushrut
-  googleplus:
-  email: sardesai.sushrut@gmail.com
-  coverpic: https://scontent-sjc2-1.xx.fbcdn.net/v/t1.0-9/943869_1000023896707723_2741273510840162346_n.jpg?oh=7d59c9be974a58c11f1d00f52e074e12&oe=57A0A980
-  profilepic: https://scontent-sjc2-1.xx.fbcdn.net/v/t1.0-9/13000357_1065940573449388_2613054671280035038_n.jpg?oh=891e6d8e4ba2a9f9a632558592855c46&oe=57E46975
+  :name: Sushrut Sardesai
+  :bragwords: Wanderer, Photographer
+  :coverpic: 
+  :profilepic: 
+  :twitter: 
+  :linkedin: 
+  :facebook: https://www.facebook.com/sardesai.sushrut
+  :googleplus: 
+  :email: sardesai.sushrut@gmail.com
+  :id: sushrut
+apurva:
+  :name: Apurva (Appy) Bhave(-Sardesai)
+  :bragwords: almost Ph.D, Herbs, Aquaponics, Food, 
+  :coverpic: 
+  :profilepic: 
+  :twitter: 
+  :linkedin: https://www.linkedin.com/in/apurvabhave/
+  :facebook: 
+  :googleplus: 
+  :email: apsy09@gmail.com
+  :id: apurva
