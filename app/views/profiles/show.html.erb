@@ -8,11 +8,11 @@
 
                 </div>
                 <div class="avatar">
-                    <%= image_tag src=@profile[:profilepic] %>
+                    <%= image_tag src=@profile[:profilepic]||"/assets/dog.png" %>
                 </div>
                 <div class="info">
                     <div class="title">
-                        <a target="_blank" href="http://scripteden.com/"><%= @profile[:name] %></a>
+                        <a target="_blank" href="#"><%= @profile[:name] %></a>
                     </div>
                     <% @profile[:bragwords].split(",").each do |brag| %>
                       <div class="desc"><%=brag%></div>

@@ -17,7 +17,7 @@ class ProfilesController < ApplicationController
     parsed_prof = params[:profile].symbolize_keys
     @profile = Profile.new(parsed_prof)
     if @profile.save
-      redirect_to post_path(@profile)
+      redirect_to profile_path(@profile)
     else
       render "new"
     end
